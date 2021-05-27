@@ -19,7 +19,7 @@ spec:
         image: elastic/elasticsearch:6.4.0
         env:
         - name: discovery.type
-          value: ""single-node""
+          value: single-node
         ports:
         - containerPort: 9200
         - containerPort: 9300

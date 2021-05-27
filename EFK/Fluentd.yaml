@@ -13,7 +13,7 @@ metadata:
   namespace: kube-system
 rules:
 - apiGroups:
-  - """"
+  - ""
   resources:
   - pods
   - namespaces
@@ -65,11 +65,11 @@ spec:
         image: fluent/fluentd-kubernetes-daemonset:v1-debian-elasticsearch
         env:
           - name:  FLUENT_ELASTICSEARCH_HOST
-            value: ""elasticsearch-svc.default.svc.cluster.local""
+            value: elasticsearch-svc.default.svc.cluster.local
           - name:  FLUENT_ELASTICSEARCH_PORT
-            value: ""9200""
+            value: 9200
           - name: FLUENT_ELASTICSEARCH_SCHEME
-            value: ""http""
+            value: http
         resources:
           limits:
             memory: 200Mi
@@ -89,4 +89,4 @@ spec:
           path: /var/log
       - name: varlibdockercontainers
         hostPath:
-          path: /var/lib/docker/containers"	
+          path: /var/lib/docker/containers	
