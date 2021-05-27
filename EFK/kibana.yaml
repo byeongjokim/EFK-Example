@@ -22,7 +22,7 @@ spec:
         - name: SERVER_NAME
           value: kibana.kubenetes.example.com
         - name: ELASTICSEARCH_URL
-          value: http://elasticsearch-svc.default.svc.cluster.local:9200
+          value: http://elasticsearch-svc:9200
         ports:
         - containerPort: 5601
 ---
